@@ -1,9 +1,30 @@
-import React from "react";
-import { Button, HStack, Image, Text, background } from "@chakra-ui/react";
+import React, { useState } from "react";
+import {
+  Box,
+  Button,
+  HStack,
+  Image,
+  Text,
+  MenuItem,
+  MenuList,
+  IconButton,
+  Menu,
+  Show,
+  MenuButton,
+  Hide,
+} from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import cryptoImg from "../Assests/crypto.png";
+import "../Styles/responsive.css";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Header = () => {
+  const btnProp = {
+    color: "white",
+    padding: "10px",
+    fontSize: "1.2rem",
+  };
+
   return (
     <HStack
       w={"full"}
@@ -12,58 +33,58 @@ const Header = () => {
       top={0}
       p="4"
       bgColor={"#061121"}
-      shadow="base"
+      shadow={"base"}
       justifyContent={"space-between"}
     >
       <HStack>
-        <Image src={cryptoImg} h={"20"} objectFit={"contain"} />
+        <Image src={cryptoImg} h={["10", "20"]} objectFit={"contain"} />
         <Text
-          style={{
-            color: "white",
-            font: "500 2.3rem white",
-          }}
+          fontSize={["1rem", "2rem"]}
+          color={"white"}
+          fontWeight={["200", "500"]}
         >
           Rookie.Crypto
         </Text>
       </HStack>
-      <HStack>
-        <Button
-          bgColor={"#061121"}
-          fontWeight={"600"}
-          fontSize="1.2rem"
-          color={"white"}
-          colorScheme="Whatsapp"
-        >
-          <Link to="/">Home</Link>
-        </Button>
-        <Button
-          color={"white"}
-          bgColor={"#061121"}
-          fontWeight={"600"}
-          fontSize="1.2rem"
-          colorScheme="Whatsapp"
-        >
-          <Link to="/coins">Coins</Link>
-        </Button>
-        <Button
-          color={"white"}
-          bgColor={"#061121"}
-          fontWeight={"600"}
-          fontSize="1.2rem"
-          colorScheme="Whatsapp"
-        >
-          <Link to="/exchange">Exchange</Link>
-        </Button>
-        <Button
-          color={"white"}
-          bgColor={"#061121"}
-          fontWeight={"600"}
-          fontSize="1.2rem"
-          colorScheme="Whatsapp"
-        >
-          <Link to="/"> Contact Us</Link>
-        </Button>
-      </HStack>
+
+      <Hide breakpoint="(max-width: 767px)">
+        <HStack>
+          <Button css={{ ...btnProp }} variant={"link"} color={"#222222"}>
+            <Link to="/">Home</Link>
+          </Button>
+          <Button css={{ ...btnProp }} variant={"link"} color={"#222222"}>
+            <Link to="/exchange">Exchanges</Link>
+          </Button>
+          <Button css={{ ...btnProp }} variant={"link"} color={"#222222"}>
+            <Link to="/coins">Coins</Link>
+          </Button>
+        </HStack>
+      </Hide>
+
+      <Show breakpoint="(max-width: 767px)">
+        <Menu>
+          <MenuButton
+            as={IconButton}
+            aria-label="Options"
+            icon={<GiHamburgerMenu />}
+            variant="ghost"
+            shadow={"base"}
+            border={"1px solid #8ecae6"}
+            color={"#ffffff"}
+          />
+          <MenuList bgColor={"#e0e0e0"}>
+            <MenuItem bgColor={"#e0e0e0"} color={"#222222"}>
+              <Link to="/">Home</Link>
+            </MenuItem>
+            <MenuItem bgColor={"#e0e0e0"} color={"#222222"}>
+              <Link to="/exchange">Exchanges</Link>
+            </MenuItem>
+            <MenuItem bgColor={"#e0e0e0"} color={"#222222"}>
+              <Link to="/coins">Coins</Link>
+            </MenuItem>
+          </MenuList>
+        </Menu>
+      </Show>
     </HStack>
   );
 };

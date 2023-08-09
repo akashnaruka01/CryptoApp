@@ -51,7 +51,7 @@ const Coins = () => {
   };
 
   return (
-    <Container maxW="full" bgColor={"#0b1426"} p={"8"}>
+    <Container maxW="full" bgColor={"#0b1426"} p={['3',"6"]}>
       {loading ? (
         <Loader />
       ) : (
@@ -60,7 +60,7 @@ const Coins = () => {
             value={currency}
             color={"white"}
             onChange={setCurrency}
-            p={"8"}
+            p={"5"}
           >
             <HStack spacing={"6"}>
               <Radio value={"inr"}>INR</Radio>

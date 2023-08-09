@@ -19,20 +19,19 @@ const Exchange = () => {
 
   useEffect(() => {
     const fetchExchanges = async () => {
-      
       try {
-        const { data } = await axios.get(`${server}/exchanges`);  
+        const { data } = await axios.get(`${server}/exchanges`);
         setExchanges(data);
         setLoading(false);
       } catch (error) {
-          setError(true);
+        setError(true);
       }
     };
 
     fetchExchanges();
   }, []);
 
-  if(error) return <ErrorComponent />
+  if (error) return <ErrorComponent />;
 
   return (
     <Container p={4} maxW="full" bgColor={"#0b1426"}>
@@ -40,7 +39,7 @@ const Exchange = () => {
         <Loader />
       ) : (
         <>
-          <HStack wrap="wrap" p="16" justifyContent={"center"}> 
+          <HStack wrap="wrap" p="16" justifyContent={"center"}>
             {exchanges.map((i) => (
               <ExchangeCard
                 key={i.id}

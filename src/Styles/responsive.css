@@ -1,0 +1,70 @@
+@media (max-width: 768px) {
+  .vedioTxt {
+    font-size: 2.5rem;
+  }
+  .cryptoEarn {
+    height: 90vh !important;
+  }
+
+  .home2Photo {
+    height: 70vh !important;
+  }
+
+  .home2heading {
+    text-align: center;
+  }
+  .home2txt {
+    font-size: 2rem !important;
+    text-align: center;
+  }
+  .footerSymbol {
+    height: 70% !important;
+  }
+  .rookieTxt {
+    font-size: 1.2rem !important;
+  }
+  .footerPart1 {
+    padding: 0 !important;
+    width: 40% !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .home2Photo {
+    height: 50vh !important;
+  }
+
+  .footerBox {
+    /* justify-content: center !important; */
+    height: 40vh !important;
+  }
+
+  .footerLine{
+    margin: 0 !important;
+  }
+  .footerPart1{
+    /* background-color: pink; */
+    width: 100% !important;
+    justify-content: center;
+  }
+ 
+  .copyright{
+    padding-top: 8px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .vedioTxt {
+    font-size: 1.5rem;
+  }
+
+  .home2heading {
+    font-size: 1.2rem !important;
+  }
+
+  .home2txt {
+    padding-top: 4px;
+    font-size: 1.6rem !important;
+  }
+}
