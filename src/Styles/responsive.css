@@ -55,8 +55,14 @@
 }
 
 @media (max-width: 550px) {
+
+  .videoTag{
+    height: 60vh !important;
+    object-fit: cover;
+  }
+
   .vedioTxt {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
   .home2heading {

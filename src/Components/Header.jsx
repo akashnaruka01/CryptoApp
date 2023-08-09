@@ -37,11 +37,11 @@ const Header = () => {
       justifyContent={"space-between"}
     >
       <HStack>
-        <Image src={cryptoImg} h={["10", "20"]} objectFit={"contain"} />
+        <Image src={cryptoImg} h={["12", "20"]} objectFit={"contain"} />
         <Text
-          fontSize={["1rem", "2rem"]}
+          fontSize={["1.2rem", "2rem"]}
           color={"white"}
-          fontWeight={["200", "500"]}
+          fontWeight={"500"}
         >
           Rookie.Crypto
         </Text>
