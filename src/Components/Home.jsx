@@ -76,7 +76,7 @@ const Home = () => {
           <Text
             className="home2txt"
             color={"white"}
-            fontSize={"4rem"}
+            fontSize={"3.5rem"}
             fontWeight={"600"}
           >
             Buy Bitcoin and other crypto at true cost.
@@ -104,7 +104,7 @@ const Home = () => {
           <Text
             className="home2txt"
             color={"white"}
-            fontSize={"4rem"}
+            fontSize={"3.5rem"}
             fontWeight={"600"}
           >
             Cryptocurrency in Every Wallet™
