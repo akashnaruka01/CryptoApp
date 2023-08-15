@@ -13,7 +13,6 @@ import {
 import CoinCard from "./CoinCard";
 import Loader from "./Loader";
 import ErrorComponent from "./ErrorComponent";
-import { transform } from "framer-motion";
 
 const Coins = () => {
   const [coins, setCoins] = useState([]);
@@ -44,7 +43,6 @@ const Coins = () => {
 
   if (error) return <ErrorComponent error="Data is not synchronizing" />;
 
-  const btnArr = new Array(132).fill(-1);
 
   const btnProp = {
     color: "white",
@@ -80,24 +78,6 @@ const Coins = () => {
                 currencySymbol={currencySymbol}
                 symbol={i.symbol}
               />
-            ))}
-          </HStack>
-          <HStack
-            justifyContent="center"
-            m="6"
-            w="contain"
-            overflowX="scroll"
-            p="4"
-          >
-            {btnArr.map((item, index) => (
-              <Button
-                key={index}
-                bgColor="blackAlpha.900"
-                color={"whiteAlpha.900"}
-                onClick={() => [setPage(index + 1), setLoading(true)]}
-              >
-                {index + 1}
-              </Button>
             ))}
           </HStack>
         </>
