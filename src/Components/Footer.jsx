@@ -24,6 +24,7 @@ const Footer = () => {
       <hr></hr>
       <Box w="full" p={"4"} h="22vh" bgColor={"#0b1426"} className="footerBox">
         <Stack
+          className="footerH"
           h={"70%"}
           color={"white"}
           justifyContent={"space-between"}

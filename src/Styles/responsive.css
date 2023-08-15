@@ -34,8 +34,11 @@
     height: 50vh !important;
   }
 
+  .footerH{
+    height: 60% !important;
+  }
+
   .footerBox {
-    /* justify-content: center !important; */
     height: 40vh !important;
   }
 
