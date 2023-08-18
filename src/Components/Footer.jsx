@@ -69,7 +69,7 @@ const Footer = () => {
               </a>
             </Button>
             <Button variant={"link"}>
-              <a href="https://www.instagram.com/">
+              <a href="https://www.instagram.com/prabhuu_000001/">
                 <AiFillInstagram size={"35"} />
               </a>
             </Button>
